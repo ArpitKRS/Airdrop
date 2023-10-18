@@ -40,9 +40,9 @@ contract AirDrop {
         IERC1155 _token,
         address[] calldata _to,
         uint256[] calldata _id,
-        uint256[] calldata _amount,
-        bytes calldata data
-    ) public {
+        uint256[] calldata _amount
+    ) public /* bytes calldata data */
+    {
         require(
             _to.length == _id.length,
             "Receiver and amounts are of different lengths"
